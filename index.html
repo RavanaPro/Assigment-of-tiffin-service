@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function passvalue()
+        {
+            const name = document.getElementById('full_name').value;
+            const email = document.getElementById('Email').value;
+            const ph = document.getElementById('phone').value;
+            const ad = document.getElementById('address').value;
+            const co = document.getElementById('code').value;
+            const sub = document.getElementById('subject').value;
+
+    
+    
+    sessionStorage.setItem("NAME", name);
+   
+    sessionStorage.setItem("EMAIL", email);
+    sessionStorage.setItem("PHONE", ph);
+    sessionStorage.setItem("ADDRESS", ad);
+    sessionStorage.setItem("CODE", co);
+    sessionStorage.setItem("SUBJECT", sub);
+   
+    return;
+            
+        }
+    </script>
+
+<title>VK Tiffin Service</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+   
+        <div class="navbar" height="1vh">
+            <img src="img/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                
+                <li><a href="#">About</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+         </div>
+         <div class="container">
+         </div>
+         <div class="cart" >
+             <img src="img/Veg non veglogo.png" class="logo1" >  
+         </div>
+        <div class="place">
+            <h1> Place Your Order</h1>
+        </div>
+        <div class="main" >
+            <form action="order.html">
+                <div id="name">
+                    <h2 class="name">Name</h2>
+                    <input class="full_name" type="text" id="full_name">
+                    <label class="firstlabel">Full Name</label>
+                 </div>
+                <h2 class="name">Email</h2>
+                <input class="Email"type="text" id="Email">
+        
+                <h2 class="name">Phone no.</h2>
+                <input class="phone"type="text" id="phone">
+                
+                <h2 class="name">Address</h2>
+                <input class="address"type="text" id="address">
+                
+                <h2 class="name">Area Code</h2>
+                <input class="code"type="text" id="code">
+        
+                <h2 class="name">Food Type</h2>
+                <select class="option" id="subject">
+                    <option disabled="disabled" selected="selected">-Choose Option-</option>
+                    <option > VEG</option>
+                    <option > NON-VEG</option>
+                    
+                </select>
+                <button type="submit" value="Click" onclick="passvalue();">Place Order</button>
+                </div>
+           </form>
+        
+        
+   
+
+
+
+
+</section>
+</body>
+</html>
